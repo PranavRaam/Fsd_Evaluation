@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./employee_management
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" 
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000" 
+    environment:
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=skp124912
+      - DB_NAME=employee
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: skp124912
+      MYSQL_DATABASE: employee

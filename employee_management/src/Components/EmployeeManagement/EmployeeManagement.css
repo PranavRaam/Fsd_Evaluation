@@ -1,0 +1,134 @@
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+
+.employee-management {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.employee-management form div {
+  margin-bottom: 15px;
+}
+
+.employee-management form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.employee-management form input,
+.employee-management form select,
+.employee-management form button {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.employee-management form input:focus,
+.employee-management form select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.employee-management form button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.employee-management form button:hover {
+  background-color: #0056b3;
+}
+
+.employee-management form small {
+  color: red;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Employee List Styling */
+.employee-list-container {
+  margin-top: 20px;
+}
+
+.list-heading {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.no-employees {
+  text-align: center;
+  color: #888;
+}
+
+.employee-management table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.employee-management table th,
+.employee-management table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.employee-management table th {
+  background-color: #f4f4f4;
+}
+
+.employee-management table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.employee-management table .selected-row {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.employee-details {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.employee-details h3 {
+  margin-top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .employee-management table {
+    font-size: 14px;
+  }
+
+  .employee-management form input,
+  .employee-management form select,
+  .employee-management form button {
+    font-size: 14px;
+  }
+
+  .employee-details {
+    font-size: 14px;
+  }
+}
